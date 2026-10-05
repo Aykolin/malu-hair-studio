@@ -173,7 +173,7 @@ a {
 
 .brand-logo-image {
   display: block;
-  width: clamp(8.5rem, 11vw, 10.75rem);
+  width: clamp(12rem, 15vw, 14rem);
   height: auto;
   object-fit: contain;
 }
@@ -1291,7 +1291,7 @@ a {
   }
 
   .brand-logo-image {
-    width: 7.75rem;
+    width: clamp(8.75rem, 39vw, 9.5rem);
   }
 
   .header-cta {

@@ -27,7 +27,9 @@ describe("Malu Hair Studio home", () => {
   it("uses the official Malu Hair Studio brand assets", () => {
     const { container } = render(<Home />);
 
-    expect(screen.getByAltText("Malu Hair Studio")).toBeInTheDocument();
+    expect(screen.getByAltText("Malu Hair Studio").getAttribute("src")).toContain(
+      "malu-hair-studio-logo-completa.png",
+    );
     expect(container.querySelector(".contact-brand-icon")?.getAttribute("src")).toContain(
       "malu-hair-studio-icon.png",
     );
