@@ -1,7 +1,9 @@
+import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 import { SiteFooter } from "@/components/site-footer";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Direitos e propriedade intelectual | Malu Hair Studio",
@@ -61,14 +63,12 @@ export default function DireitosPage() {
               Quer apresentar sua marca com um website próprio? Conheça o trabalho do KS Studio e
               descubra possibilidades para a sua presença digital.
             </p>
-            <a
-              className="gold-button legal-cta"
-              href="https://kauanystudio.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visitar KS Studio ↗
-            </a>
+            <Button asChild size="lg" className="gold-button legal-cta">
+              <a href="https://kauanystudio.com/" target="_blank" rel="noreferrer">
+                Entrar em contato com a KS Studio
+                <ArrowUpRight aria-hidden="true" />
+              </a>
+            </Button>
           </section>
         </article>
       </main>

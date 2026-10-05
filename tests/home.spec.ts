@@ -20,10 +20,9 @@ test("opens the intellectual property page from the footer", async ({ page }) =>
   await expect(
     page.getByRole("heading", { level: 1, name: "Direitos e propriedade intelectual" }),
   ).toBeVisible();
-  await expect(page.getByRole("link", { name: "Visitar KS Studio ↗" })).toHaveAttribute(
-    "href",
-    "https://kauanystudio.com/",
-  );
+  const studioCta = page.getByRole("link", { name: "Entrar em contato com a KS Studio" });
+  await expect(studioCta).toBeVisible();
+  await expect(studioCta).toHaveAttribute("href", "https://kauanystudio.com/");
 });
 
 test("has no automatically detectable accessibility violations", async ({ page }) => {
@@ -35,6 +34,22 @@ test("has no automatically detectable accessibility violations", async ({ page }
 test("keeps the mobile viewport free from horizontal overflow", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
+
+  const dimensions = await page.evaluate(() => ({
+    body: document.body.scrollWidth,
+    viewport: document.documentElement.clientWidth,
+  }));
+  expect(dimensions.body).toBeLessThanOrEqual(dimensions.viewport);
+});
+
+test("keeps the rights page usable on mobile", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/direitos");
+
+  await expect(
+    page.getByRole("link", { name: "Malu Hair Studio — voltar ao início" }),
+  ).toBeVisible();
+  await expect(page.getByRole("link", { name: "Entrar em contato com a KS Studio" })).toBeVisible();
 
   const dimensions = await page.evaluate(() => ({
     body: document.body.scrollWidth,

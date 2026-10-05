@@ -4,12 +4,17 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <p>
-        © 2026 Malu Hair Studio. <Link href="/direitos">All Rights Reserved.</Link>
-        <span aria-hidden="true"> | </span>
-        Desenvolvido por{" "}
-        <a href="https://kauanystudio.com/" target="_blank" rel="noreferrer">
-          KS Studio
-        </a>
+        <span>© 2026 Malu Hair Studio.</span>
+        <Link href="/direitos">All Rights Reserved.</Link>
+        <span className="footer-separator" aria-hidden="true">
+          |
+        </span>
+        <span>
+          Desenvolvido por{" "}
+          <a href="https://kauanystudio.com/" target="_blank" rel="noreferrer">
+            KS Studio
+          </a>
+        </span>
       </p>
     </footer>
   );
