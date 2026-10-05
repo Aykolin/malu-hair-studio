@@ -1,0 +1,26 @@
+version: 1
+project:
+  name: malu-hair-studio
+
+layers:
+  - name: app
+    match: ["app/**/*.ts", "app/**/*.tsx"]
+  - name: components
+    match: ["components/**/*.ts", "components/**/*.tsx"]
+  - name: shared
+    match: ["lib/**/*.ts", "lib/**/*.tsx", "hooks/**/*.ts", "hooks/**/*.tsx"]
+
+ruleset:
+  app: { mayDependOn: [components, shared] }
+  components: { mayDependOn: [components, shared] }
+  shared: { mayDependOn: [shared] }
+
+expectations:
+  - name: shared-must-not-import-ui
+    expect: { layer: shared }
+    to:
+      notDependOnPaths: ["app/**", "components/**"]
+
+agent:
+  updateDocs:
+    - AGENTS.md

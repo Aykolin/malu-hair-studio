@@ -1,0 +1,19 @@
+name: Melhoria
+description: Propor evolução de experiência, qualidade ou performance
+title: "[Melhoria]: "
+labels: ["improvement"]
+body:
+  - type: textarea
+    id: opportunity
+    attributes:
+      label: Oportunidade
+      description: O que pode ficar melhor e qual impacto esperado?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      placeholder: "- [ ] ..."
+    validations:
+      required: true

@@ -1,0 +1,25 @@
+name: Correção
+description: Relatar um erro ou regressão
+title: "[Correção]: "
+labels: ["correction"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema
+      description: O que está errado e onde acontece?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      placeholder: "- [ ] ..."
+    validations:
+      required: true

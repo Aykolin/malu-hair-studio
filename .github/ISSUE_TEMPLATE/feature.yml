@@ -1,0 +1,25 @@
+name: Nova função
+description: Propor uma nova capacidade ou integração
+title: "[Nova função]: "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Resultado desejado
+      description: Qual necessidade a nova função resolve?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      placeholder: "- [ ] ..."
+    validations:
+      required: true

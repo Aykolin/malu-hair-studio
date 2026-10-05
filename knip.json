@@ -1,0 +1,33 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}", "tests/**/*.ts"],
+  "project": ["**/*.{ts,tsx,mts}"],
+  "ignore": [
+    "components/ui/**",
+    "db/**",
+    "examples/**",
+    "build/**",
+    "lib/connector-*",
+    "lib/connectors.ts",
+    "scripts/**"
+  ],
+  "ignoreDependencies": [
+    "@cloudflare/workers-types",
+    "@commitlint/cli",
+    "@hookform/resolvers",
+    "@shadcn/react",
+    "@tailwindcss/postcss",
+    "@testing-library/user-event",
+    "drizzle-kit",
+    "drizzle-orm",
+    "eslint-config-next",
+    "json-rpc-2.0",
+    "postcss",
+    "raw-body",
+    "tailwindcss",
+    "tw-animate-css",
+    "vinext",
+    "web-vitals",
+    "wrangler"
+  ]
+}
