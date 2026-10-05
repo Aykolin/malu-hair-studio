@@ -326,6 +326,8 @@ a {
   display: block;
   width: max-content;
   max-width: 100%;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
   background: linear-gradient(
     105deg,
     #8f5c18 0%,
@@ -345,7 +347,7 @@ a {
 
 .gold-text::after {
   position: absolute;
-  inset: 0;
+  inset: 0 0 -0.14em;
   background:
     radial-gradient(circle at 8% 35%, #fff 0 0.025em, transparent 0.04em),
     radial-gradient(circle at 26% 72%, #fff8ca 0 0.02em, transparent 0.042em),
