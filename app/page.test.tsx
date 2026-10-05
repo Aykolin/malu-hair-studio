@@ -24,6 +24,15 @@ describe("Malu Hair Studio home", () => {
     );
   });
 
+  it("uses the official Malu Hair Studio brand assets", () => {
+    const { container } = render(<Home />);
+
+    expect(screen.getByAltText("Malu Hair Studio")).toBeInTheDocument();
+    expect(container.querySelector(".contact-brand-icon")?.getAttribute("src")).toContain(
+      "malu-hair-studio-icon.png",
+    );
+  });
+
   it("keeps image slots ready for the future portfolio", () => {
     render(<Home />);
     expect(screen.getAllByRole("img", { name: /Espaço reservado para foto \d/i })).toHaveLength(6);

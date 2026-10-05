@@ -167,6 +167,17 @@ a {
   letter-spacing: 0.03em;
 }
 
+.brand--logo {
+  flex: 0 0 auto;
+}
+
+.brand-logo-image {
+  display: block;
+  width: clamp(8.5rem, 11vw, 10.75rem);
+  height: auto;
+  object-fit: contain;
+}
+
 .brand strong {
   font-weight: 400;
   opacity: 0.64;
@@ -810,6 +821,15 @@ a {
   position: relative;
 }
 
+.contact-brand-icon {
+  display: block;
+  width: clamp(3.75rem, 5vw, 4.75rem);
+  height: auto;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+  filter: drop-shadow(0 10px 30px rgba(211, 167, 72, 0.12));
+}
+
 .contact h2 {
   max-width: 11ch;
   margin-inline: auto;
@@ -1268,6 +1288,10 @@ a {
     display: none;
   }
 
+  .brand-logo-image {
+    width: 7.75rem;
+  }
+
   .header-cta {
     min-height: 2.75rem;
     padding-inline: 1rem;
@@ -1442,6 +1466,11 @@ a {
 
   .contact {
     padding-block: 5.5rem;
+  }
+
+  .contact-brand-icon {
+    width: 3.75rem;
+    margin-bottom: 1.6rem;
   }
 
   .contact-inner > p:not(.eyebrow) {

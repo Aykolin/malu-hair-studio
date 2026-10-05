@@ -1,5 +1,7 @@
 import { MapPin, MessageCircle } from "lucide-react";
+import Image from "next/image";
 
+import { BrandLogo } from "@/components/brand-logo";
 import { MapEmbed } from "@/components/map-embed";
 import { Reveal } from "@/components/reveal";
 import { SiteFooter } from "@/components/site-footer";
@@ -82,13 +84,8 @@ export default function Home() {
       <div className="route-progress" aria-hidden="true" />
 
       <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Malu Hair Studio — início">
-          <span className="brand-mark" aria-hidden="true">
-            M
-          </span>
-          <span>
-            Malu <strong>Hair Studio</strong>
-          </span>
+        <a className="brand brand--logo" href="#inicio" aria-label="Malu Hair Studio — início">
+          <BrandLogo />
         </a>
 
         <nav aria-label="Navegação principal">
@@ -278,6 +275,14 @@ export default function Home() {
         <section className="contact" aria-labelledby="contact-title">
           <div className="contact-orbit" aria-hidden="true" />
           <div className="section-shell contact-inner">
+            <Image
+              className="contact-brand-icon"
+              src="/malu-hair-studio-icon.png"
+              alt=""
+              width={435}
+              height={542}
+              sizes="(max-width: 640px) 60px, 76px"
+            />
             <h2 id="contact-title">Vamos cuidar do seu cabelo?</h2>
             <p>Fale diretamente com a equipe e encontre o melhor horário para você.</p>
             <div className="contact-actions">

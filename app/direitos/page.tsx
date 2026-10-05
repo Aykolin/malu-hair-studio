@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { BrandLogo } from "@/components/brand-logo";
 import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
 
@@ -16,13 +17,12 @@ export default function DireitosPage() {
   return (
     <>
       <header className="legal-header">
-        <Link className="brand" href="/" aria-label="Malu Hair Studio — voltar ao início">
-          <span className="brand-mark" aria-hidden="true">
-            M
-          </span>
-          <span>
-            Malu <strong>Hair Studio</strong>
-          </span>
+        <Link
+          className="brand brand--logo"
+          href="/"
+          aria-label="Malu Hair Studio — voltar ao início"
+        >
+          <BrandLogo />
         </Link>
         <Link className="legal-back" href="/">
           Voltar ao site
