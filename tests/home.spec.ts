@@ -8,7 +8,7 @@ test("renders the portfolio landing page and primary CTA", async ({ page }) => {
   await expect(page.getByRole("link", { name: "Agendar pelo WhatsApp" })).toBeVisible();
   await expect(page.locator("#profissionais")).toContainText("Marcinha");
   await expect(page.locator("#profissionais")).toContainText("Lucy");
-  await expect(page.getByRole("link", { name: "All Rights Reserved." })).toHaveAttribute(
+  await expect(page.getByRole("link", { name: "Todos os direitos reservados" })).toHaveAttribute(
     "href",
     "/direitos",
   );
