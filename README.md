@@ -32,4 +32,4 @@ Os espaços de imagens são intencionais. Quando as fotos reais estiverem dispon
 
 ## Fluxo de contribuição
 
-Siga obrigatoriamente o fluxo descrito em `AGENTS.md`: Issue classificada → branch → Pull Request com `Closes #número` → checks → deploy.
+As alterações são feitas diretamente na `main`: valide o projeto, crie um commit Conventional Commits e envie com `git push origin main`. Issues e Pull Requests são usados apenas quando solicitados.

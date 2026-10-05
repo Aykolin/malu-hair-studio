@@ -1,23 +1,15 @@
 # Malu Hair Studio — instruções permanentes do projeto
 
-## Fluxo obrigatório de trabalho
+## Fluxo de trabalho
 
-Toda alteração deve começar por uma Issue no GitHub, classificada como uma destas categorias:
+Trabalhe diretamente na branch `main`, salvo quando o usuário pedir explicitamente uma branch ou Pull Request.
 
-- `correction`: correção de comportamento, conteúdo ou regressão;
-- `improvement`: melhoria de experiência, performance, acessibilidade ou manutenção;
-- `feature`: nova função, integração, página ou capacidade.
+1. preserve e atualize os arquivos do projeto no checkout atual;
+2. execute os checks proporcionais à alteração;
+3. faça commits no padrão Conventional Commits;
+4. envie normalmente com `git push origin main`.
 
-Depois da Issue:
-
-1. crie uma branch no padrão `tipo/numero-resumo` (ex.: `feature/12-galeria-real`);
-2. faça commits no padrão Conventional Commits;
-3. abra um Pull Request para `main`;
-4. mencione a Issue na descrição com `Closes #<número>`;
-5. aguarde lint, arquitetura, testes e build passarem;
-6. faça deploy somente a partir do PR revisado/aprovado ou após seu merge, nunca por mudança solta em `main`.
-
-Não faça push direto em `main`. Mudanças emergenciais continuam exigindo Issue e PR.
+Issues, branches separadas e Pull Requests são opcionais e só devem ser criados quando o usuário solicitar.
 
 ## Design e motion
 
