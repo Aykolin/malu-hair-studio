@@ -12,7 +12,7 @@ export function BrandLogo({ className = "" }: BrandLogoProps) {
       alt="Malu Hair Studio"
       width={2172}
       height={724}
-      sizes="(max-width: 640px) 152px, 224px"
+      sizes="(max-width: 640px) 124px, 176px"
       priority
     />
   );
